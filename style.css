@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+        --Pale-Blue: hsl(243, 100%, 93%);
+        --Grayish-Blue: hsl(229, 7%, 55%);
+        --Dark-Blue: hsl(228, 56%, 26%);
+        --Very-Dark-Blue: hsl(229, 57%, 11%);
+
+        /* Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%) */
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: 'Raleway', sans-serif;
+        background-color: var(--Very-Dark-Blue);
+        background-repeat: no-repeat;
+        background-position: top 19rem left 0;
+        background-image: url(images/bg-desktop.png);
+}
+
+.data_component_container {
+        position: relative;
+        width: 60%;
+        display: flex;
+        gap: 2rem;
+}
+
+.column1 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2.5rem 8rem 2.5rem 2.5rem;
+        border-radius: 10px;
+        border-top-right-radius: 90px;
+        background-color: var(--Dark-Blue);
+}
+
+.brand_logo {
+        width: 9rem;
+}
+
+.bottom_section {
+        display: flex;
+        gap: 1rem;
+}
+
+.bottom_section .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem;
+        border-radius: 10px;
+        background-color: var(--Very-Dark-Blue);
+}
+
+.column2 {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 3rem;
+        padding: 2rem;
+        width: 100%;
+        border-radius: 10px;
+        background-color: var(--Dark-Blue);
+}
+
+.data_storage_details {
+        position: relative;
+        width: 100%;
+}
+
+.data_storage_details h5 {
+        font-weight: 400;
+        color: var(--Pale-Blue);
+}
+
+.data_storage_details h5 span {
+        font-weight: 700;
+        color: var(--Pale-Blue);
+}
+
+.data_graphic_visualization {
+        position: relative;
+        width: 100%;
+        height: 18px;
+        padding: 2px;
+        margin-top: 1rem;
+        border-radius: 20px;
+        background-color: var(--Very-Dark-Blue);
+}
+
+.data_bar {
+        position: relative;
+        width: 75%;
+        height: 100%;
+        border-radius: 20px;
+        background: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+}
+
+.data_circle {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+}
+
+.data_storage {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+        color: var(--Pale-Blue);
+}
+
+.data_storage_left_container {
+        position: absolute;
+        top: -5rem;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0.8rem 1.6rem;
+        border-radius: 10px;
+        background-color: #fff;
+}
+
+.data_storage_left_container::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -1.2rem;
+        width: 5px;
+        display: block;
+        border-top: 20px solid transparent;
+        border-right: 30px solid #fff;
+        border-bottom: 20px solid transparent;
+}
+
+.data_storage_left_container h1 {
+        color: var(--Very-Dark-Blue);
+        font-size: 2.5rem;
+        font-weight: 700;
+}
+
+.data_storage_left_container h6 {
+        color: var(--Grayish-Blue);
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+}
+
+.attribution { 
+        position: absolute;
+        bottom: 10px;
+        font-size: 11px; 
+        text-align: center; 
+}
+
+.attribution a { 
+        color: hsl(6, 100%, 80%); 
+        text-decoration: none;
+}
+
+@media (max-width: 1090px) {
+        html {
+                font-size: 90%;
+        }
+
+        .data_component_container {
+                width: 85%;
+        }
+}
+
+@media (max-width: 768px) {
+        .column2 {
+                margin-top: 1rem;
+                padding: 2rem 2rem 3rem 2rem;
+        }
+
+        .data_component_container {
+                width: 20rem;
+                flex-direction: column;
+                gap: 0;
+        }
+
+        .data_storage_left_container {
+                top: 5.5rem;
+                right: 3rem;
+        }
+
+        .data_storage_left_container h1 {
+                font-size: 2rem;
+        }
+
+        .data_storage_left_container h6 {
+                font-size: 0.850rem;
+        }
+
+        .data_storage_left_container::after {
+                display: none;
+        }
+}
+
+@media (max-width: 375px) {
+        body {
+                background-image: url(images/bg-mobile.png);
+                background-position: top -3.8rem left 0;
+                background-repeat: no-repeat;
+        }
+}
+
+@media (max-width: 320px) {
+        html {
+                font-size: 80%;
+        }
+}
